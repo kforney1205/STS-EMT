@@ -50,6 +50,7 @@
           <input type="email" id="email" class="form-input" placeholder="enter your email" required="required">
         </div>
 
+
         <!-- Firstname and Lastname -->
         <!-- <div class="horizontal-group">
           <div class="form-group left">
@@ -156,6 +157,22 @@
       function getRndInteger(min, max) {
       return Math.floor(Math.random() * (max - min + 1) ) + min;
       }
+
+      for (var i = 1; i <= 31; i++) {
+      $('#birthDay').append('<option value="' + i + '">' + i + '</option>');
+      }
+
+      for (var i = 1; i <= 12; i++) {
+      $('#birthMonth').append('<option value="' + i + '">' + i + '</option>');
+      }
+
+      var currentTime = new Date();
+      var year = currentTime.getFullYear();
+      for (var i = year; i >= 1900; i--) {
+      $('#birthYear').append('<option value="' + i + '">' + i + '</option>');
+      }
+
+
     </script>
 
   </body>
