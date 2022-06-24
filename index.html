@@ -19,13 +19,13 @@
         <!-- EMT Version -->
 
         <div class="form-group">
-          <label for="casenumber" class="label-title">Case/Run Number*</label><br>
+          <label for="casenumber" class="label-title">Case/Run Number *</label><br>
           <button class="btn" type="button" onclick="document.getElementById('casenumber').value = getRndInteger(100001,999999999)">Get Case #</button>
           <input type="text" id="casenumber" class="form-input" maxlength="9" placeholder="Insert Case Number" required="required">
         </div>
 
         <div class="form-group">
-         <label class="label-title">Case Type</label>
+         <label class="label-title">Case Type *</label>
             <select class="form-input" id="level">
               <option value="NoneSelected">-----</option>
               <option value="Urgent">Urgent</option>
@@ -36,7 +36,7 @@
   
         <div class="horizontal-group">
           <div class="form-group left">
-            <label for="firstname" class="label-title">Patient First name *</label>
+            <label for="firstname" class="label-title">Patient First Name *</label>
             <input type="text" id="firstname" class="form-input" placeholder="enter the first name" required="required" />
           </div>
           <div class="form-group right">
@@ -45,9 +45,25 @@
           </div>
         </div> 
 
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label class="label-title">Gender:</label>
+            <div class="input-group">
+              <label for="male"><input type="radio" name="gender" value="male" id="male"> Male</label>
+              <label for="female"><input type="radio" name="gender" value="female" id="female"> Female</label>
+            </div>
+          </div>
+          <div class="form-group right">
+            <label class="label-title">Date of Birth</label>
+            <select id="birthDay"><option value="0">Day</option></select>
+            <select id="birthMonth"><option value="0">Month</option></select>
+            <select id="birthYear"><option value="0">Year</option></select>
+          </div>
+        </div>
+
         <div class="form-group">
-          <label for="email" class="label-title">Email*</label>
-          <input type="email" id="email" class="form-input" placeholder="enter your email" required="required">
+          <label for="email" class="label-title">Patient Email</label>
+          <input type="email" id="email" class="form-input" placeholder="Patient Email Contact">
         </div>
 
 
