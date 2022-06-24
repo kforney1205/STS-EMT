@@ -75,7 +75,7 @@ body {
  .form-input-multi {
     font-size: 17px;
     box-sizing: border-box;
-    display: inline;
+    display: inline-block;
     height: 34px;
     padding-left: 10px;
     padding-right: 10px;
