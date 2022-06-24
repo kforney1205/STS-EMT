@@ -16,6 +16,16 @@
       <!-- form body -->
       <div class="form-body">
 
+        <!-- EMT Version -->
+
+        <div class="form-group">
+          <label for="casenumber" class="label-title">Case/Run Number*</label>
+          <button class="btn" type="button" onclick="document.getElementById('casenumber').value = getRndInteger(100001,999999999)">Get Case #</button>
+          <input type="text" id="casenumber" class="form-input" maxlength="9" placeholder="Insert Case Number" required="required">
+        </div>
+  
+
+
         <!-- Firstname and Lastname -->
         <!-- <div class="horizontal-group">
           <div class="form-group left">
