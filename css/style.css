@@ -72,6 +72,20 @@ body {
     outline: none;
 }
 
+ .form-input-multi {
+    font-size: 17px;
+    box-sizing: border-box;
+    display: inline;
+    height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #333333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: white;
+    outline: none;
+}
 
 
 .horizontal-group .left{

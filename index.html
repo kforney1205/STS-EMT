@@ -21,7 +21,7 @@
         <div class="form-group">
           <label for="casenumber" class="label-title">Case/Run Number *</label><br>
           <button class="btn" type="button" onclick="document.getElementById('casenumber').value = getRndInteger(100001,999999999)">Get Case #</button>
-          <input type="text" id="casenumber" class="form-input" maxlength="9" placeholder="Insert Case Number" required="required">
+          <input type="text" id="casenumber" class="form-input-multi" maxlength="9" placeholder="Insert Case Number" required="required">
         </div>
 
         <div class="form-group">
@@ -37,11 +37,11 @@
         <div class="horizontal-group">
           <div class="form-group left">
             <label for="firstname" class="label-title">Patient First Name *</label>
-            <input type="text" id="firstname" class="form-input" placeholder="enter the first name" required="required" />
+            <input type="text" id="firstname" class="form-input" placeholder="given name" required="required" />
           </div>
           <div class="form-group right">
-            <label for="lastname" class="label-title">Patient Surname *</label>
-            <input type="text" id="lastname" class="form-input" placeholder="enter the last name" required="required"/>
+            <label for="lastname" class="label-title">Patient Last Name *</label>
+            <input type="text" id="lastname" class="form-input" placeholder="surname" required="required"/>
           </div>
         </div> 
 
@@ -54,10 +54,12 @@
             </div>
           </div>
           <div class="form-group right">
-            <label class="label-title">Date of Birth</label>
+            <label class="label-title">Date of Birth:</label>
+            <div class="input-group">
             <select id="birthDay"><option value="0">Day</option></select>
             <select id="birthMonth"><option value="0">Month</option></select>
             <select id="birthYear"><option value="0">Year</option></select>
+          </div>
           </div>
         </div>
 
