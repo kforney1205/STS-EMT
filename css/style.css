@@ -78,9 +78,25 @@ body {
     box-sizing: border-box;
     display: inline-block;
     height: 34px;
-    width: 400px;
+    width: 75%;
     padding-left: 10px;
     padding-right: 10px;
+    color: #333333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: white;
+    outline: none;
+}
+
+ .form-input-mini {
+    font-size: 17px;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 34px;
+    width: 30%;
+    padding-left: 5px;
+    padding-right: 5px;
     color: #333333;
     text-align: left;
     border: 1px solid #d6d6d6;
