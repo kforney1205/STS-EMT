@@ -105,6 +105,20 @@ body {
     outline: none;
 }
 
+.form-input-texarea {
+    font-size: 12px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #333333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: white;
+    outline: none;
+}
 
 .horizontal-group .left{
   float:left;
