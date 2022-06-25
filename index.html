@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
   </head>
   <body>
-    <form class="signup-form" action="/register" method="post">
+    <form class="signup-form" onsubmit="vidSessionRedirect(); return false">
 
       <!-- form header -->
       <div class="form-header">
@@ -56,23 +56,23 @@
             </div>
           </div>
           <div class="form-group right">
-            <label class="label-title">Date of Birth:</label>
+            <label class="label-title">Date of Birth:*</label>
             <div class="input-group">
-            <select id="birthDay" class="form-input-mini"><option value="0">Day</option></select>
-            <select id="birthMonth" class="form-input-mini"><option value="0">Month</option></select>
-            <select id="birthYear" class="form-input-mini"><option value="0">Year</option></select>
+            <select id="day" name="day" class="form-input-mini"><option value="0">Day</option></select>
+            <select id="month" name="month" class="form-input-mini"><option value="0">Month</option></select>
+            <select id="year" name="year" class="form-input-mini"><option value="0">Year</option></select>
           </div>
           </div>
         </div>
 
         <div class="form-group">
-          <label for="email" class="label-title">Patient Email:</label>
-          <input type="email" id="email" class="form-input" placeholder="Patient Email Contact:">
+          <label for="email" class="label-title">Patient Email:*</label>
+          <input type="email" id="email" class="form-input" required="required" placeholder="Patient Email Contact:">
         </div>
 
         <div class="form-group">
-          <label for="contactnum" class="label-title">Patient Phone Number:</label>
-          <input type="contactnum" id="contactnum" class="form-input" placeholder="Patient Phone Number:">
+          <label for="contactnum" class="label-title">Patient Phone Number:*</label>
+          <input type="contactnum" id="contactnum" class="form-input" required="required" placeholder="Patient Phone Number:">
         </div>
 
          <div class="form-group">
@@ -84,97 +84,12 @@
           <label for="chiefcomplaint" class="label-title">Chief Complaint:</label>
           <textarea id="chiefcomplaint" name="chiefcomplaint" class="form-input-texarea" placeholder="Describe the reason for the interaction" rows="10" cols="50"></textarea>
         </div>
-
-        <!-- Firstname and Lastname -->
-        <!-- <div class="horizontal-group">
-          <div class="form-group left">
-            <label for="firstname" class="label-title">First name *</label>
-            <input type="text" id="firstname" class="form-input" placeholder="enter your first name" required="required" />
-          </div>
-          <div class="form-group right">
-            <label for="lastname" class="label-title">Last name</label>
-            <input type="text" id="lastname" class="form-input" placeholder="enter your last name" />
-          </div>
-        </div> -->
-
-        <!-- Email -->
-        <!-- <div class="form-group">
-          <label for="email" class="label-title">Email*</label>
-          <input type="email" id="email" class="form-input" placeholder="enter your email" required="required">
-        </div> -->
-
-        <!-- Passwrod and confirm password -->
-       <!--  <div class="horizontal-group">
-          <div class="form-group left">
-            <label for="password" class="label-title">Password *</label>
-            <input type="password" id="password" class="form-input" placeholder="enter your password" required="required">
-          </div>
-          <div class="form-group right">
-            <label for="confirm-password" class="label-title">Confirm Password *</label>
-            <input type="password" class="form-input" id="confirm-password" placeholder="enter your password again" required="required">
-          </div>
-        </div> -->
-
-        <!-- Gender and Hobbies -->
-       <!--  <div class="horizontal-group">
-          <div class="form-group left">
-            <label class="label-title">Gender:</label>
-            <div class="input-group">
-              <label for="male"><input type="radio" name="gender" value="male" id="male"> Male</label>
-              <label for="female"><input type="radio" name="gender" value="female" id="female"> Female</label>
-            </div>
-          </div>
-          <div class="form-group right">
-            <label class="label-title">Hobbies</label>
-            <div >
-              <label><input type="checkbox" value="Web">Music</label>
-              <label><input type="checkbox" value="iOS">Sports</label>
-              <label><input type="checkbox" value="Andriod">Travel</label>
-              <label><input type="checkbox" value="Game">Movies</label>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- Source of Income and Income -->
-        <!-- <div class="horizontal-group">
-          <div class="form-group left" >
-            <label class="label-title">Source of Income</label>
-            <select class="form-input" id="level" >
-              <option value="B">Employed</option>
-              <option value="I">Self-employed</option>
-              <option value="A">Unemployed</option>
-            </select>
-          </div>
-          <div class="form-group right">
-            <label for="experience" class="label-title">Income</label>
-            <input type="range" min="20" max="100" step="5"  value="0" id="experience" class="form-input" onChange="change();" style="height:28px;width:78%;padding:0;">
-            <span id="range-label">20K</span>
-          </div>
-        </div> -->
-
-        <!-- Profile picture and Age -->
-        <!-- <div class="horizontal-group">
-          <div class="form-group left" >
-            <label for="choose-file" class="label-title">Upload Profile Picture</label>
-            <input type="file" id="choose-file" size="80">
-          </div>
-          <div class="form-group right">
-            <label for="experience" class="label-title">Age</label>
-            <input type="number" min="18" max="80"  value="18" class="form-input">
-          </div>
-        </div> -->
-
-        <!-- Bio -->
-        <!-- <div class="form-group">
-          <label for="choose-file" class="label-title">Bio</label>
-          <textarea class="form-input" rows="4" cols="50" style="height:auto"></textarea>
-        </div> -->
       </div> 
 
       <!-- form-footer -->
        <div class="form-footer">
         <span>* required</span>
-        <button type="submit" class="btn">Create</button>
+        <button type="submit" class="btn" onclick="vidSessionRedirect();">Submit and Launch Call</button>
       </div>
 
     </form> 
@@ -192,20 +107,73 @@
       return Math.floor(Math.random() * (max - min + 1) ) + min;
       }
 
-      for (var i = 1; i <= 31; i++) {
-      $('#birthDay').append('<option value="' + i + '">' + i + '</option>');
-      }
 
-      for (var i = 1; i <= 12; i++) {
-      $('#birthMonth').append('<option value="' + i + '">' + i + '</option>');
-      }
+(function () {
+    let day_selected = (new Date).getDate(); // current day
+    let option = '';
+    option = '<option>Day</option>'; // first option
 
-      var currentTime = new Date();
-      var year = currentTime.getFullYear();
-      for (var i = year; i >= 1900; i--) {
-      $('#birthYear').append('<option value="' + i + '">' + i + '</option>');
-      }
+    for (let i = 1; i < 32; i++) {
+        // value day number with 0. 01 02 03 04..
+        let day = (i <= 9) ? '0' + i : i;
 
+        // or value day number 1 2 3 4..
+        // let day = i;
+
+        let selected = (i === day_selected ? ' selected' : '');
+        option += '<option value="' + day + '"' + selected + '>' + day + '</option>';
+    }
+    document.getElementById("day").innerHTML = option;
+})();
+
+      
+
+      (function () {
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var month_selected = (new Date).getMonth(); // current month
+    var option = '';
+    option = '<option>Month</option>'; // first option
+
+    for (let i = 0; i < months.length; i++) {
+        let month_number = (i + 1);
+
+        // value month number with 0. [01 02 03 04..]
+        let month = (month_number <= 9) ? '0' + month_number : month_number;
+
+        // or value month number. [1 2 3 4..]
+        // let month = month_number;
+
+        // or value month names. [January February]
+        // let month = months[i];
+
+        let selected = (i === month_selected ? ' selected' : '');
+        option += '<option value="' + month + '"' + selected + '>' + months[i] + '</option>';
+    }
+    document.getElementById("month").innerHTML = option;
+})();
+
+
+(function () {
+    let year_satart = 1910;
+    let year_end = (new Date).getFullYear(); // current year
+    let year_selected = "Year";
+
+    let option = '';
+    option = '<option>Year</option>'; // first option
+
+    for (let i = year_satart; i <= year_end; i++) {
+        let selected = (i === year_selected ? ' selected' : '');
+        option += '<option value="' + i + '"' + selected + '>' + i + '</option>';
+    }
+
+    document.getElementById("year").innerHTML = option;
+})();
+
+function vidSessionRedirect(){
+
+    window.location.href=('https://xmb-hc.pex-gcc.com/webapp/#/?conference=mp' + document.getElementById("casenumber").value +'&name=' + document.getElementById("firstname").value + '%20' + document.getElementById("lastname").value + '&callType=video&role=guest');
+
+}
 
     </script>
 
