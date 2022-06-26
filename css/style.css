@@ -11,7 +11,7 @@
 /* Register Form */
 /*---------------------------------------*/
 body {
-  background:linear-gradient(to right, #78a7ba 0%, #385D6C 50%, #78a7ba 99%);
+  background:linear-gradient(to right, #39adf3 0%, #4285b9 50%, #39adf3 99%);
 }
 
 .signup-form {
@@ -61,7 +61,7 @@ body {
 }
 
 .form-body .label-title {
-  color:#1BBA93;
+  color:#0077c0;
   font-size: 17px;
   font-weight: bold;
   padding-bottom: 12px;
@@ -148,7 +148,7 @@ input[type="file"] {
 #range-label {
   width:15%;
   padding:5px;
-  background-color: #1BBA93;
+  background-color: #0077c0;
   color:white;
   border-radius: 5px;
   font-size: 17px;
@@ -185,7 +185,7 @@ input[type="file"] {
 .btn {
    display:inline-block;
    padding:10px 20px;
-   background-color: #1BBA93;
+   background-color: #0077c0;
    font-size:17px;
    border:none;
    border-radius:5px;
@@ -194,6 +194,6 @@ input[type="file"] {
 }
 
 .btn:hover {
-  background-color: #169c7b;
+  background-color: #004b85;
   color:white;
 }
