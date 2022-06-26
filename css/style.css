@@ -35,14 +35,16 @@ body {
   font-size: 30px;
   text-align:center;
   color:#666;
-  padding:20px 0;
-  border-bottom:1px solid #cccccc;
   display: inline-block;
+  vertical-align: middle;
+
 }
 
 .form-header img {
   display:  inline-block;
-  height: 30px;
+  height: 50px;
+  padding-right: 20px;
+  vertical-align: middle;
 }
 
 
